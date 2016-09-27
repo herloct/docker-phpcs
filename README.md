@@ -26,5 +26,5 @@ For example, to check `src` directory against the PSR1 and PSR2 coding standard.
 docker run --rm \
     -v /local/path:/project \
     -w /project \
-    herloct/phpcbf --standard=PSR1,PSR2 src
+    herloct/phpcs --standard=PSR1,PSR2 src
 ```
