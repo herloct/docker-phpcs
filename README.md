@@ -1,5 +1,7 @@
 [Docker](http://www.docker.com/) image for [PHP_CodeSniffer](http://php.net)'s `phpcs`.
 
+[![](https://images.microbadger.com/badges/image/herloct/phpcs.svg)](http://microbadger.com/images/herloct/phpcs "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/herloct/phpcs.svg)](http://microbadger.com/images/herloct/phpcs "Get your own version badge on microbadger.com")
+
 ## What's Inside
 
 This image is based on [official PHP 7.0 image](https://hub.docker.com/_/php/),
