@@ -18,7 +18,6 @@ Basic usage.
 ```sh
 docker run --rm \
     -v /local/path:/project \
-    -w /project \
     herloct/phpcs [<options>]
 ```
 
@@ -27,6 +26,5 @@ For example, to check `src` directory against the PSR1 and PSR2 coding standard.
 ```sh
 docker run --rm \
     -v /local/path:/project \
-    -w /project \
     herloct/phpcs --standard=PSR1,PSR2 src
 ```
