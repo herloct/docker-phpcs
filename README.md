@@ -6,8 +6,7 @@
 
 ## What is PHP_CodeSniffer and phpcs?
 
-PHP_CodeSniffer's `phpcs` is a script that tokenizes PHP, JavaScript and CSS files to detect violations of a defined
-coding standard.
+PHP_CodeSniffer's `phpcs` is a script that tokenizes PHP, JavaScript and CSS files to detect violations of a defined coding standard.
 
 > https://github.com/squizlabs/PHP_CodeSniffer
 
