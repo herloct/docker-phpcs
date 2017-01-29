@@ -2,7 +2,7 @@
 
 ## Supported tags and respective `Dockerfile` links
 
-* [`2.7.0`, `latest`](https://github.com/herloct/docker-phpcs/blob/master/2.7.0/Dockerfile)
+* [`2.7.1`, `latest`](https://github.com/herloct/docker-phpcs/blob/2.7.1/Dockerfile)
 
 ## What is PHP_CodeSniffer and phpcs?
 
@@ -16,7 +16,7 @@ Basic usage.
 
 ```sh
 docker run --rm \
-    -v /local/path:/project \
+    --volume /local/path:/project \
     herloct/phpcs [<options>]
 ```
 
@@ -24,6 +24,10 @@ For example, to check `src` directory against the PSR1 and PSR2 coding standard.
 
 ```sh
 docker run --rm \
-    -v /local/path:/project \
+    --volume /local/path:/project \
     herloct/phpcs --standard=PSR1,PSR2 src
 ```
+
+## Volumes
+
+* **/project**: Your PHP project directory.
