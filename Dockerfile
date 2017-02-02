@@ -2,7 +2,7 @@ FROM php:7.1.1-alpine
 
 MAINTAINER herloct <herloct@gmail.com>
 
-ENV PHPCS_VERSION=2.7.1
+ENV PHPCS_VERSION=2.8.0
 
 RUN apk update --no-cache \
     && apk add --no-cache tini \

@@ -2,7 +2,8 @@
 
 ## Supported tags and respective `Dockerfile` links
 
-* [`2.7.1`, `latest`](https://github.com/herloct/docker-phpcs/blob/2.7.1/Dockerfile)
+* [`2.8.0`, `latest`](https://github.com/herloct/docker-phpcs/blob/2.8.0/Dockerfile)
+* [`2.7.1`](https://github.com/herloct/docker-phpcs/blob/2.7.1/Dockerfile)
 
 ## What is PHP_CodeSniffer and phpcs?
 
