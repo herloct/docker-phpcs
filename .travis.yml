@@ -8,7 +8,7 @@ matrix:
   fast_finish: true
   include:
     - env:
-      - PHPCS_VERSION=2.9.1
+      - PHPCS_VERSION=3.0.0
       - IS_LATEST=1
 
 before_script:

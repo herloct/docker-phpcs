@@ -3,7 +3,8 @@
 
 ## Supported tags and respective `Dockerfile` links
 
-* [`2.9.1`, `latest`](https://github.com/herloct/docker-phpcs/blob/2.9.1/Dockerfile)
+* [`3.0.0`, `latest`](https://github.com/herloct/docker-phpcs/blob/3.0.0/Dockerfile)
+* [`2.9.1`](https://github.com/herloct/docker-phpcs/blob/2.9.1/Dockerfile)
 * [`2.9.0`](https://github.com/herloct/docker-phpcs/blob/2.9.0/Dockerfile)
 * [`2.8.1`](https://github.com/herloct/docker-phpcs/blob/2.8.1/Dockerfile)
 * [`2.8.0`](https://github.com/herloct/docker-phpcs/blob/2.8.0/Dockerfile)
