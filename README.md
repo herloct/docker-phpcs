@@ -1,8 +1,10 @@
-[![](https://images.microbadger.com/badges/image/herloct/phpcs.svg)](http://microbadger.com/images/herloct/phpcs "Get your own image badge on microbadger.com")
+[![license](https://img.shields.io/github/license/herloct/docker-phpcs.svg)]()
+[![Build Status](https://travis-ci.org/herloct/docker-phpcs.svg?branch=master)](https://travis-ci.org/herloct/docker-phpcs)
 
 ## Supported tags and respective `Dockerfile` links
 
-* [`2.8.1`, `latest`](https://github.com/herloct/docker-phpcs/blob/2.8.1/Dockerfile)
+* [`2.9.0`, `latest`](https://github.com/herloct/docker-phpcs/blob/2.9.0/Dockerfile)
+* [`2.8.1`](https://github.com/herloct/docker-phpcs/blob/2.8.1/Dockerfile)
 * [`2.8.0`](https://github.com/herloct/docker-phpcs/blob/2.8.0/Dockerfile)
 * [`2.7.1`](https://github.com/herloct/docker-phpcs/blob/2.7.1/Dockerfile)
 
@@ -19,7 +21,7 @@ Basic usage.
 ```sh
 docker run --rm \
     --volume /local/path:/project \
-    herloct/phpcs [<options>]
+    herloct/phpcs[:tag] [<options>]
 ```
 
 For example, to check `src` directory against the PSR1 and PSR2 coding standard.
@@ -32,4 +34,4 @@ docker run --rm \
 
 ## Volumes
 
-* **/project**: Your PHP project directory.
+* `/project`: Your PHP project directory.

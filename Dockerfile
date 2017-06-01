@@ -1,8 +1,8 @@
-FROM php:7.1.1-alpine
+FROM php:7.1.5-alpine
 
 MAINTAINER herloct <herloct@gmail.com>
 
-ENV PHPCS_VERSION=2.8.1
+ENV PHPCS_VERSION=2.9.0
 
 RUN curl -L https://github.com/squizlabs/PHP_CodeSniffer/releases/download/$PHPCS_VERSION/phpcs.phar > /usr/local/bin/phpcs \
     && chmod +x /usr/local/bin/phpcs \

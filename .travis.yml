@@ -1,0 +1,39 @@
+sudo: required
+dist: trusty
+
+services:
+  - docker
+
+matrix:
+  fast_finish: true
+  include:
+    - env:
+      - PHPCS_VERSION=2.9.0
+      - IS_LATEST=1
+
+before_script:
+  - docker build --rm --tag herloct/phpcs:$PHPCS_VERSION-$TRAVIS_BRANCH .
+  - docker run --rm herloct/phpcs:$PHPCS_VERSION-$TRAVIS_BRANCH
+
+script:
+  - cd tests
+  - docker run --rm
+    --volume $(pwd):/project
+    herloct/phpcs:$PHPCS_VERSION-$TRAVIS_BRANCH --version
+  - docker run --rm
+    --volume $(pwd):/project
+    herloct/phpcs:$PHPCS_VERSION-$TRAVIS_BRANCH --standard=PSR1,PSR2 --report-file=report Sample.php || true
+  - if [[ ! -f "report" ]]; then exit 1; fi
+  - cat report
+
+after_success:
+  - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
+  - docker push herloct/phpcs:$PHPCS_VERSION-$TRAVIS_BRANCH;
+  - if [[ $TRAVIS_TAG ]]; then
+    docker tag herloct/phpcs:$PHPCS_VERSION-$TRAVIS_BRANCH herloct/phpcs:$PHPCS_VERSION;
+    docker push herloct/phpcs:$PHPCS_VERSION;
+    fi
+  - if [[ $TRAVIS_TAG ]] && [[ $IS_LATEST == 1 ]]; then
+    docker tag herloct/phpcs:$PHPCS_VERSION herloct/phpcs:latest;
+    docker push herloct/phpcs:latest;
+    fi
