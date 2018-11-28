@@ -8,7 +8,7 @@ matrix:
   fast_finish: true
   include:
     - env:
-      - PHPCS_VERSION=3.0.0
+      - PHPCS_VERSION=3.3.2
       - IS_LATEST=1
 
 before_script:
@@ -27,7 +27,7 @@ script:
   - cat report
 
 after_success:
-  - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
+  - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin;
   - docker push herloct/phpcs:$PHPCS_VERSION-$TRAVIS_BRANCH;
   - if [[ $TRAVIS_TAG ]]; then
     docker tag herloct/phpcs:$PHPCS_VERSION-$TRAVIS_BRANCH herloct/phpcs:$PHPCS_VERSION;
